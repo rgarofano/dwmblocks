@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-mem_usage=$(free | awk '/Mem:/ {printf "%.0f", ($3/$2)*100}')
-
-printf "%3d%%" "$mem_usage"
+awk '
+/MemTotal:/     { total = $2 }
+/MemAvailable:/ { avail = $2 }
+END {
+    used = total - avail
+    printf "%5.1f/%4.1f GiB",
+           used / 1048576,
+           total / 1048576
+}
+' /proc/meminfo
