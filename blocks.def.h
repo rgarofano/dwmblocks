@@ -1,9 +1,9 @@
 static const Block blocks[] = {
 // Icon, Command, Update Interval, Update Signal
-    {" ", "block-memory", 10, 0},
-//  {"", "block-battery", 60, 0},
-    {"", "block-volume", 0, 10},
-    {"  ", "block-datetime", 1, 0},
+    {" ", "status-memory", 10, 0},
+//  {"", "status-battery", 60, 0},
+    {"", "status-volume", 0, 10},
+    {"  ", "status-datetime", 1, 0},
 };
 
 // Sets delimiter between status commands. NULL character ('\0') means no delimiter.
