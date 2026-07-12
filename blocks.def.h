@@ -1,6 +1,7 @@
 static const Block blocks[] = {
 // Icon, Command, Update Interval, Update Signal
-    {" ", "status-memory", 10, 0},
+    {" ", "status-network", 0, 11},
+    {"", "status-memory", 10, 0},
 //  {"", "status-battery", 60, 0},
     {"", "status-volume", 0, 10},
     {"  ", "status-datetime", 1, 0},
